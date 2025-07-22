@@ -1,0 +1,467 @@
+{
+	"info": {
+		"_postman_id": "3cc19fa6-0cdf-461e-98c5-e477ae4bf8ba",
+		"name": "Cine-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46949408",
+		"_collection_link": "https://lawgubrie-8314281.postman.co/workspace/Luis-Aguirre's-Workspace~437ed53f-b52d-4626-848f-e6f7b1331ea5/collection/46949408-3cc19fa6-0cdf-461e-98c5-e477ae4bf8ba?action=share&source=collection_link&creator=46949408"
+	},
+	"item": [
+		{
+			"name": "Peliculas",
+			"item": [
+				{
+					"name": "Obtener todas las películas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/peliculas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"peliculas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener película por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/peliculas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"peliculas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nueva película",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Dune: Parte Dos\",\r\n    \"duracion\": 166,\r\n    \"imagen\": \"dune2.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5041/api/peliculas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"peliculas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar película",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Pelicula\": 8,\r\n    \"nombre\": \"Avengers: Endgame (Edición Especial)\",\r\n    \"duracion\": 191,\r\n    \"imagen\": \"avengers-special.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5041/api/peliculas/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"peliculas",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar película",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/peliculas/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"peliculas",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener pelicula por nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/Peliculas/buscar/spide",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"Peliculas",
+								"buscar",
+								"spide"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Salas",
+			"item": [
+				{
+					"name": "Obtener todas las salas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/salas-cine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"salas-cine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener sala por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/salas-cine/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"salas-cine",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nueva sala",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Sala 3D IMAX\",\r\n    \"estado\": 1,\r\n    \"tipo\": \"IMAX\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5041/api/salas-cine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"salas-cine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verificar disponibilidad",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreSala\": \"Sala 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5041/api/salas-cine/verificar-disponibilidad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"salas-cine",
+								"verificar-disponibilidad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar sala",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_Sala\": 3,\r\n    \"nombre\": \"Sala Premium 1 (Nueva)\",\r\n    \"estado\": 1,\r\n    \"tipo\": \"Vip\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5041/api/salas-cine/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"salas-cine",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar sala",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/salas-cine/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"salas-cine",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DashBoard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/salas-cine/dashboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"salas-cine",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asignacion Pelicula-Sala",
+			"item": [
+				{
+					"name": "Obtener todas las asignaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/asignaciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"asignaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener películas por fecha",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/asignaciones/por-fecha/2025-07-21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"asignaciones",
+								"por-fecha",
+								"2025-07-21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asignar película a sala",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaPublicacion\": \"2025-08-21\",\r\n    \"fechaFin\": \"2025-08-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5041/api/asignaciones/pelicula/8/sala/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"asignaciones",
+								"pelicula",
+								"8",
+								"sala",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Asignacion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPeliculaSala\": 8,\r\n    \"idPelicula\": 8,\r\n    \"idSalaCine\": 3,\r\n    \"fechaPublicacion\": \"2025-08-21\",\r\n    \"fechaFin\": \"2025-08-30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5041/api/asignaciones/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"asignaciones",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar asignación",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5041/api/asignaciones/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5041",
+							"path": [
+								"api",
+								"asignaciones",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
